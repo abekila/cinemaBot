@@ -1,0 +1,8 @@
+{
+    "appSecret": "6b081f01bc62f003e1e27e9a2dee631f",
+    "pageAccessToken": "EAAg6MJH1lBABAG1ddYRek8pouxKt6mOpgkZCcpvnrNwLOisoDZBQ8Up3JeTBnhJWVvSzW4AZCYX8DIHM2J3FP7dyJYiObtPfMkelWCt9TS6QjR2tswvw37WerEVoGEi1Ygr8EpLfOTIGAjXMyaWdTUZBhFjMM5XAZA1ZCBP7jov0fNXNZA8qbi3",
+    "validationToken": "TOKEN",
+    "serverURL": "https://4fa7519b.ngrok.io",
+    "wit_Token" : "VBZA2LVJTMPXCZN34LC7SIZZEMJBHD4U",
+    "wit_Endpoint" :"https://api.wit.ai/message?v=20181109&q="
+}
