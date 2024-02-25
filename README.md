@@ -1,36 +1,42 @@
-# Messenger Platform Sample -- node.js
+# Facebook Messenger Cinema Chatbot
 
-This project is an example server for Messenger Platform built in Node.js. With this app, you can send it messages and it will echo them back to you. You can also see examples of the different types of Structured Messages. 
+Welcome to the Facebook Messenger Cinema Chatbot, a sophisticated AI-powered assistant designed to revolutionize the way users discover and book movie tickets. Leveraging geolocation, this chatbot provides personalized cinema recommendations, movie showtimes, trailers, and enables ticket booking at user-preferred cinemas. It also offers a subscription service for updates on upcoming movie releases.
 
-It contains the following functionality:
+## Features
 
-* Webhook (specifically for Messenger Platform events)
-* Send API 
-* Web Plugins
-* Messenger Platform v1.1 features
+- **Movie Discovery**: Finds nearby cinemas based on user geolocation.
+- **Showtimes and Trailers**: Shares movie showtimes and trailers to help users make informed decisions.
+- **Ticket Booking**: Facilitates ticket booking for the selected movie at a preferred cinema.
+- **Upcoming Movies Subscription**: Allows users to subscribe and receive recommendations for upcoming movies.
+- **Natural Language Processing**: Employs wit.ai to understand and process user queries effectively.
+- **Integration with MovieGlu**: Accesses extensive movie metadata from MovieGlu for accurate information.
 
-Follow the [walk-through](https://developers.facebook.com/docs/messenger-platform/quickstart) to learn about this project in more detail.
+## Technologies Used
 
-## Setup
+- **Node.js**: Powers the backend of the application.
+- **wit.ai**: Processes natural language, enabling the chatbot to understand user inquiries.
+- **Facebook Graph API**: Manages data exchange with the Facebook Messenger platform.
+- **MovieGlu API**: Retrieves detailed movie metadata.
+- **MongoDB**: Stores information about subscribed users.
+- **ngrok**: Exposes local servers to the internet, facilitating local development.
 
-Set the values in `config/default.json` before running the sample. Descriptions of each parameter can be found in `app.js`. Alternatively, you can set the corresponding environment variables as defined in `app.js`.
+## Getting Started
 
-Replace values for `APP_ID` and `PAGE_ID` in `public/index.html`.
+### Setup
 
-## Run
+1. **Configuration**: Initialize configuration parameters in `config/default.json`. Refer to `app.js` for parameter descriptions. Environment variables can also be set as defined in `app.js`.
 
-You can start the server by running `npm start`. However, the webhook must be at a public URL that the Facebook servers can reach. Therefore, running the server locally on your machine will not work.
+### Running the Project
 
-You can run this example on a cloud service provider like Heroku, Google Cloud Platform or AWS. Note that webhooks must have a valid SSL certificate, signed by a certificate authority. Read more about setting up SSL for a [Webhook](https://developers.facebook.com/docs/graph-api/webhooks#setup).
+1. **Starting the Server**: Use `npm start` to launch the server. For local development, ensure ngrok is installed to expose your server to the internet.
+2. **Webhook Requirements**: A public URL (SSL-certified by a recognized authority) is necessary for Facebook servers to reach your webhook. Refer to Facebook's [Webhook Setup Documentation](https://developers.facebook.com/docs/graph-api/webhooks#setup) for more details.
 
-## Webhook
+### Webhook Implementation
 
-All webhook code is in `app.js`. It is routed to `/webhook`. This project handles callbacks for authentication, messages, delivery confirmation and postbacks. More details are available at the [reference docs](https://developers.facebook.com/docs/messenger-platform/webhook-reference).
+- The webhook implementation is detailed in `app.js`, routing to `/webhook`.
+- It handles authentication, message processing, delivery confirmations, and postbacks.
+- For extensive details, visit the [Facebook Webhook Reference](https://developers.facebook.com/docs/messenger-platform/webhook-reference).
 
-## "Send to Messenger" and "Message Us" Plugin
+## Important Note
 
-An example of the "Send to Messenger" plugin and "Message Us" plugin are located at `index.html`. The "Send to Messenger" plugin can be used to trigger an authentication event. More details are available at the [reference docs](https://developers.facebook.com/docs/messenger-platform/plugin-reference).
-
-## License
-
-See the LICENSE file in the root directory of this source tree. Feel free to use and modify the code.
+- **Developer Dashboard Configuration**: The chatbot requires author configuration through the Facebook Developer Dashboard to be operational. It is not publicly available on Facebook Messenger without this setup.
